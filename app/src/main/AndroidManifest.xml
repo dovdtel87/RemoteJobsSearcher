@@ -3,6 +3,7 @@
     package="com.dmgdavid2109.remotejobsearcher">
 
     <application
+        android:name=".RemoteJobsApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
