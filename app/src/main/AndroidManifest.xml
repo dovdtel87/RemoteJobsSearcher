@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dmgdavid2109.remotejobsearcher">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".RemoteJobsApplication"
         android:allowBackup="true"
