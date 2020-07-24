@@ -8,8 +8,9 @@ import com.dmgdavid2109.remotejobsearcher.jobs.domain.repository.CompaniesReposi
 
 import com.dmgdavid2109.remotejobsearcher.common.data.Result
 import com.dmgdavid2109.remotejobsearcher.common.data.toResult
+import javax.inject.Inject
 
-class CompaniesRepositoryImpl(
+class CompaniesRepositoryImpl @Inject constructor(
     private val companiesApi: CompaniesApi,
     private val companiesMapper: ListMapper<CompanyDTO, Company>
 ) : CompaniesRepository {
