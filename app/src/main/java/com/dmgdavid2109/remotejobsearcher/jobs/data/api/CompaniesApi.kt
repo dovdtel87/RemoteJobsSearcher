@@ -5,6 +5,6 @@ import retrofit2.Response
 import retrofit2.http.GET
 
 interface CompaniesApi {
-    @GET("/companies")
+    @GET("companies.json")
     suspend fun retrieveCompanies(): Response<CompaniesResponse>
 }
