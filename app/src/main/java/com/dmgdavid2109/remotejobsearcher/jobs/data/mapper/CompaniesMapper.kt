@@ -10,8 +10,8 @@ class CompaniesMapper @Inject constructor() : Mapper<CompanyDTO, Company> {
     override fun map(input: CompanyDTO): Company {
         with(input) {
             return Company(
-                "aName",
-                "anUrl"   // TODO IMPLEMENT THE MAPPER
+                input.nombre,
+                input.url
             )
         }
     }

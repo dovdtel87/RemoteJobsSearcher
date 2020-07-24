@@ -5,5 +5,5 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class CompaniesResponse(
-    @Json(name = "items") var items: List<CompanyDTO>
+    @Json(name = "items") val items: List<CompanyDTO>
 )
