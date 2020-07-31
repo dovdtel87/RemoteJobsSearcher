@@ -20,7 +20,7 @@ class JobsListViewModel @Inject constructor(
 
     fun loadList() {
         viewModelScope.launch {
-            //showStartLoading()
+            showStartLoading()
             val result = getCompaniesUseCase()
             result.fold(::showError, ::showCompaniesList)
         }
@@ -42,6 +42,12 @@ class JobsListViewModel @Inject constructor(
                 isLoading = false,
                 errorMessage = R.string.generic_error
             )
+        }
+    }
+
+    private fun showStartLoading() {
+        _viewState.updateCurrentState {
+            copy(isLoading = true)
         }
     }
 
