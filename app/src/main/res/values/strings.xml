@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">RemoteJobSearcher</string>
     <string name="generic_error">There was an error!</string>
+    <string name="company_logo">Logo of company</string>
+    <string name="try_again">Try again</string>
 </resources>
