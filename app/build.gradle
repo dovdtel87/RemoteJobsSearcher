@@ -28,7 +28,7 @@ android {
         jvmTarget = "1.8"
     }
 
-    dataBinding {
+    viewBinding {
         enabled = true
     }
 
@@ -71,6 +71,9 @@ dependencies {
     def navigation = "2.3.0"
     implementation "androidx.navigation:navigation-fragment-ktx:$navigation"
     implementation "androidx.navigation:navigation-ui-ktx:$navigation"
+
+    def lifecycle = "2.2.0"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

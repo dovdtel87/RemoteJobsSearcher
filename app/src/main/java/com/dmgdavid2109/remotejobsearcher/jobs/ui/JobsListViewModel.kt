@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 class JobsListViewModel @Inject constructor(
     private val getCompaniesUseCase: GetCompaniesUseCase
-) : ViewModel() {
+) : ViewModel(), JobsListViewModelInputs {
 
     private val _viewState = ViewStateLiveData(CompaniesListViewState())
     val viewState: LiveData<CompaniesListViewState>
@@ -43,6 +43,10 @@ class JobsListViewModel @Inject constructor(
                 errorMessage = R.string.generic_error
             )
         }
+    }
+
+    override fun retry() {
+        loadList()
     }
 
 }
