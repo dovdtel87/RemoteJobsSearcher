@@ -6,12 +6,12 @@ import androidx.lifecycle.viewModelScope
 import com.dmgdavid2109.remotejobsearcher.R
 import com.dmgdavid2109.remotejobsearcher.common.ui.ViewStateLiveData
 import com.dmgdavid2109.remotejobsearcher.jobs.domain.model.Company
-import com.dmgdavid2109.remotejobsearcher.jobs.domain.usecase.GetCompaniesUseCase
+import com.dmgdavid2109.remotejobsearcher.jobs.domain.usecase.GetAndroidCompaniesUseCase
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class JobsListViewModel @Inject constructor(
-    private val getCompaniesUseCase: GetCompaniesUseCase
+    private val getAndroidCompaniesUseCase: GetAndroidCompaniesUseCase
 ) : ViewModel(), JobsListViewModelInputs {
 
     private val _viewState = ViewStateLiveData(CompaniesListViewState())
@@ -21,7 +21,7 @@ class JobsListViewModel @Inject constructor(
     fun loadList() {
         viewModelScope.launch {
             showStartLoading()
-            val result = getCompaniesUseCase()
+            val result = getAndroidCompaniesUseCase()
             result.fold(::showError, ::showCompaniesList)
         }
     }
@@ -54,5 +54,4 @@ class JobsListViewModel @Inject constructor(
     override fun retry() {
         loadList()
     }
-
 }
