@@ -10,7 +10,7 @@ import dagger.hilt.android.components.ApplicationComponent
 class ApiConfigsModule {
 
     companion object {
-        const val BASE_URL = "https://gist.githubusercontent.com/dovdtel87/495b5021d83bc3e4b635c50b0a286663/raw/66a5859d7814c821a31dcb90d305ac6014210de5/" // TODO UPDATE URL
+        const val BASE_URL = "https://gist.githubusercontent.com/dovdtel87/495b5021d83bc3e4b635c50b0a286663/raw/fe910fc671dc91c673f53fb8039873cff6bb228b/" // TODO UPDATE URL
     }
 
     @Provides
